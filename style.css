@@ -1,0 +1,83 @@
+body {
+    background: url("https://i.imgur.com/4JgFJxM.png");
+    background-size: cover;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+#container {
+    max-width: 500px;
+    margin: auto;
+    background: rgba(0,0,0,0.55);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 18px white;
+}
+
+select, button {
+    padding: 14px;
+    font-size: 18px;
+    margin-top: 15px;
+    border-radius: 10px;
+    border: none;
+    width: 90%;
+}
+
+button {
+    background: linear-gradient(90deg, red, green);
+    color: white;
+    cursor: pointer;
+}
+
+#wheel {
+    width: 90vw;
+    max-width: 330px;
+    height: 90vw;
+    max-height: 330px;
+    border-radius: 50%;
+    margin: 20px auto;
+    border: 10px solid #fff;
+    overflow: hidden;
+    transition: 4s cubic-bezier(.17,.67,.35,1.29);
+    box-shadow: 0 0 20px #fff;
+}
+
+.slice {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    left: 50%;
+    top: 50%;
+    transform-origin: 0% 0%;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+#pointer {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 35px solid gold;
+    margin: 0 auto;
+}
+
+#result {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    color: #00ff99;
+    text-shadow: 0 0 10px #00ff99;
+}
+
+.snowflake {
+    position: fixed;
+    top: -10px;
+    animation-name: fall;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fall {
+    to { transform: translateY(110vh); }
+}

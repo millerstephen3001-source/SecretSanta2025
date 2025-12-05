@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Secret Santa Login</title>
+<style>
+    body {
+        background: url("https://i.imgur.com/4JgFJxM.png");
+        background-size: cover;
+        text-align: center;
+        margin-top: 120px;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+    #box {
+        background: rgba(0,0,0,0.6);
+        padding: 25px;
+        border-radius: 15px;
+        max-width: 350px;
+        margin: auto;
+    }
+    input {
+        padding: 12px;
+        margin-top: 12px;
+        width: 80%;
+        border-radius: 8px;
+        border: none;
+        font-size: 18px;
+        text-align: center;
+    }
+    button {
+        margin-top: 15px;
+        background: red;
+        padding: 10px 20px;
+        border-radius: 10px;
+        color: white;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div id="box">
+    <h2>🎄 Secret Santa Login 🎄</h2>
+    <p>Enter the password:</p>
+    <input id="pass" type="password" placeholder="Password">
+    <br>
+    <button onclick="go()">ENTER</button>
+</div>
+
+<script>
+function go() {
+    let p = document.getElementById("pass").value;
+    if (p === "santa2024") {
+        window.location.href = "wheel.html";
+    } else {
+        alert("Incorrect password!");
+    }
+}
+</script>
+
+</body>
+</html>
